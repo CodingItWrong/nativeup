@@ -25,7 +25,7 @@ git commit -m "Remove boilerplate"
 
 yarn add -D eslint \
             babel-eslint \
-            eslint-config-airbnb \
+            eslint-config-codingitwrong \
             eslint-plugin-import \
             eslint-plugin-jsx-a11y \
             eslint-plugin-react
