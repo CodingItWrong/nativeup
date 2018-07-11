@@ -18,27 +18,38 @@ git init .
 git add .
 git commit -m "Create react native app with $1"
 
-rm App.test.js
-cp "${DIR}/template/App.js" App.js
+yarn add -D enzyme \
+            enzyme-adapter-react-16 \
+            @jonny/react-native-mock
+mkdir -p tests
+cp "${DIR}/template/tests/setup.js" tests/setup.js
 git add .
-git commit -m "Remove boilerplate"
+git commit -m "Add Enzyme"
 
-yarn add -D eslint \
+if [ "$1" = "cli" ]; then
+  yarn add -D detox
+  detox init -r jest
+  git add .
+  git commit -m "Add Detox"
+fi
+
+yarn add -D eslint@^4.19.1 \
             babel-eslint \
             eslint-config-codingitwrong \
+            eslint-plugin-detox \
             eslint-plugin-import \
+            eslint-plugin-jest \
             eslint-plugin-jsx-a11y \
             eslint-plugin-react
 cp "${DIR}/template/.eslintrc.js" .eslintrc.js
 git add .
 git commit -m "Add ESLint"
 
-if [ "$1" = "cli" ]; then
-  yarn remove jest \
-              babel-jest
-  yarn add detox \
-           mocha \
-           babel-polyfill
-  git add .
-  git commit -m "Add Detox"
-fi
+rm e2e/firstTest.spec.js
+cp "${DIR}/template/App.js" App.js
+git add .
+git commit -m "Remove boilerplate"
+
+cp "${DIR}/template/.npmrc" .npmrc
+git add .
+git commit -m "Prevent package lock"

@@ -4,6 +4,7 @@ React project setup script, using:
 
 - Initialized with either `react-native` CLI, `create-react-native-app`, or Expo
 - ESLint
+- Enzyme component testing
 - Detox end-to-end testing, if CLI was selected
 - Git repo initialized
 
