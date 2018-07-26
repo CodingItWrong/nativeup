@@ -26,8 +26,19 @@ Where `[projecttype]` is one of:
 
 The following changes to `package.json` need to be made manually after running the script:
 
-- Add lint NPM script: `"lint": "eslint *.js e2e/*.js tests/**/*.js"`
 - Change the `yarn test` script to not run Detox tests: `"test": "jest tests/**/*.spec.js"`
+
+```diff
+-    "test": "jest"
++    "test": "jest tests/**/*.spec.js",
+```
+
+- Add lint NPM script:
+
+```diff
++    `"lint": "eslint *.js e2e/*.js tests/**/*.js"`
+```
+
 - Configure Jest to run the `setup.js` file:
 
 ```diff
