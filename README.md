@@ -1,6 +1,6 @@
-# reactup
+# nativeup
 
-React project setup script, using:
+React Native project setup script, using:
 
 - Initialized with either `react-native` CLI, `create-react-native-app`, or Expo
 - ESLint
