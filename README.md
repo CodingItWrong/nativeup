@@ -8,6 +8,8 @@ React Native project setup script, using:
 - Detox end-to-end testing, if CLI was selected
 - Git repo initialized
 
+To learn more about using Jest, Enzyme, and Detox for testing, visit [reactnativetesting.io](https://reactnativetesting.io)
+
 ## Usage
 
 Add `nativeup/bin` to your `PATH`.
