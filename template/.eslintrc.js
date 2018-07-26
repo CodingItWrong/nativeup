@@ -1,6 +1,5 @@
 module.exports = {
-  'extends': [
-    'eslint:recommended',
+  extends: [
     'plugin:react/recommended',
     'codingitwrong',
   ],
