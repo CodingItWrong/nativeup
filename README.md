@@ -26,6 +26,7 @@ Where `[projecttype]` is one of:
 
 The following steps are not yet automated, and need to be done after running the script:
 
+- Add lint NPM script: `"lint": "eslint *.js e2e/*.js tests/**/*.js"`
 - [Detox setup](https://github.com/wix/detox/blob/master/docs/Introduction.GettingStarted.md#3-add-detox-config-to-packagejson) if using CLI
 
 ## License
