@@ -3,6 +3,11 @@ module.exports = {
     'plugin:react/recommended',
     'codingitwrong',
   ],
+  settings: {
+    react: {
+      version: "16.4",
+    },
+  },
   parser: 'babel-eslint',
   plugins: [
     'detox',
