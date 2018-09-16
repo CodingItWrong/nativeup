@@ -18,17 +18,25 @@ git init .
 git add .
 git commit -m "Create react native app with $1"
 
-yarn add -D enzyme \
-            enzyme-adapter-react-16 \
-            @jonny/react-native-mock
+yarn remove jest babel-jest
+git add .
+git commit -m "Remove Jest"
+
+yarn add --dev mocha chai sinon sinon-chai
+git add .
+git commit -m "Add Mocha, Chai, and Sinon"
+
+yarn add --dev enzyme \
+               enzyme-adapter-react-16 \
+               @jonny/react-native-mock
 mkdir -p tests
 cp "${DIR}/template/tests/setup.js" tests/setup.js
 git add .
 git commit -m "Add Enzyme"
 
 if [ "$1" = "cli" ]; then
-  yarn add -D detox
-  detox init -r jest
+  yarn add --dev detox
+  detox init -r mocha
   git add .
   git commit -m "Add Detox"
 fi
@@ -38,7 +46,6 @@ yarn add -D eslint@^4.19.1 \
             eslint-config-codingitwrong \
             eslint-plugin-detox \
             eslint-plugin-import \
-            eslint-plugin-jest \
             eslint-plugin-jsx-a11y \
             eslint-plugin-react
 cp "${DIR}/template/.eslintrc.js" .eslintrc.js

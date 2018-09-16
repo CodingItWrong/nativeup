@@ -4,6 +4,7 @@ React Native project setup script, using:
 
 - Initialized with either `react-native` CLI, `create-react-native-app`, or Expo
 - ESLint
+- Mocha unit testing
 - Enzyme component testing
 - Detox end-to-end testing, if CLI was selected
 - Git repo initialized
@@ -28,11 +29,11 @@ Where `[projecttype]` is one of:
 
 The following changes to `package.json` need to be made manually after running the script:
 
-- Change the `yarn test` script to not run Detox tests: `"test": "jest tests/**/*.spec.js"`
+- Change the `yarn test` script to run Mocha with the following settings:
 
 ```diff
 -    "test": "jest"
-+    "test": "jest tests/**/*.spec.js",
++    "test": "mocha --require @babel/register --require tests/setup.js tests/**/*.spec.js",
 ```
 
 - Add lint NPM script:
