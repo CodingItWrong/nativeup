@@ -39,7 +39,7 @@ if [ "$1" = "cli" ]; then
   git commit -m "Add Detox"
 fi
 
-yarn add -D eslint@^4.19.1 \
+yarn add -D eslint \
             babel-eslint \
             eslint-config-codingitwrong \
             eslint-plugin-detox \
