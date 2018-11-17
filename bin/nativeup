@@ -4,8 +4,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
 
 if [ "$1" = "cli" ]; then
   react-native init $2 --version 0.56.1
-elif [ "$1" = "crna" ]; then
-  create-react-native-app $2
 elif [ "$1" = "expo" ]; then
   expo init -t blank $2
 else

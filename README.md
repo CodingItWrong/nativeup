@@ -22,7 +22,6 @@ Add `nativeup/bin` to your `PATH`.
 Where `[projecttype]` is one of:
 
 - `cli` - React Native CLI
-- `crna` - Create React Native App
 - `expo` - Expo
 
 ## Manual Configuration
