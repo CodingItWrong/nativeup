@@ -2,7 +2,7 @@
 
 React Native project setup script, using:
 
-- Initialized with either `react-native` CLI, `create-react-native-app`, or Expo
+- Initialized with either `react-native` CLI or Expo
 - ESLint
 - Mocha unit testing
 - Enzyme component testing
