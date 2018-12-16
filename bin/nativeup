@@ -32,12 +32,19 @@ cp "${DIR}/template/tests/setup.js" tests/setup.js
 git add .
 git commit -m "Add Enzyme"
 
-if [ "$1" = "cli" ]; then
-  yarn add --dev detox
-  detox init -r mocha
-  git add .
-  git commit -m "Add Detox"
+yarn add --dev detox
+detox init -r mocha
+if [ "$1" = "expo" ]; then
+  yarn add --dev detox-expo-helpers expo-detox-hook
+
+  curl https://dpq5q02fu5f55.cloudfront.net/Exponent-2.9.0.tar.gz -o Exponent.tar.gz
+  mkdir -p bin/Exponent.app
+  tar xzvf Exponent.tar.gz --directory bin/Exponent.app
+  rm Exponent.tar.gz
+  echo "bin/Exponent.app" >> .gitignore
 fi
+git add .
+git commit -m "Add Detox"
 
 yarn add -D eslint \
             babel-eslint \

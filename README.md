@@ -6,7 +6,7 @@ React Native project setup script, using:
 - ESLint
 - Mocha unit testing
 - Enzyme component testing
-- Detox end-to-end testing, if CLI was selected
+- Detox end-to-end testing
 - Git repo initialized
 
 To learn more about using Jest, Enzyme, and Detox for testing, visit [reactnativetesting.io](https://reactnativetesting.io)
@@ -41,26 +41,34 @@ The following changes to `package.json` need to be made manually after running t
 +    `"lint": "eslint *.js e2e/*.js tests/**/*.js"`
 ```
 
-- Configure Jest to run the `setup.js` file:
-
-```diff
-   "jest": {
--    "preset": "react-native"
-+    "preset": "react-native",
-+    "setupFiles": [
-+      "./tests/setup.js"
-+    ]
-   },
-```
-
-- Configure Detox, replacing `YourAppName` with the name of the app you entered:
+- Configure Detox. If using `expo`, use the following:
 
 ```diff
  {
    ...
    "detox": {
--    "test-runner": "jest"
-+    "test-runner": "jest",
+-    "test-runner": "mocha"
++    "test-runner": "mocha",
++    "configurations": {
++      "ios.sim": {
++        "binaryPath": "bin/Exponent.app",
++        "type": "ios.simulator",
++        "name": "iPhone 7"
++      }
++    }
+   }
+ }
+```
+
+
+If using `cli`, use the following, replacing `YourAppName` with the name of the app you entered:
+
+```diff
+ {
+   ...
+   "detox": {
+-    "test-runner": "mocha"
++    "test-runner": "mocha",
 +    "configurations": {
 +      "ios.sim.debug": {
 +        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/YourAppName.app",
@@ -69,8 +77,8 @@ The following changes to `package.json` need to be made manually after running t
 +        "name": "iPhone 8"
 +      }
 +    }
-  }
-}
+   }
+ }
 ```
 
 ## License
