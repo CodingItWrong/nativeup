@@ -7,7 +7,7 @@ if [ "$1" = "cli" ]; then
 elif [ "$1" = "expo" ]; then
   expo init -t blank $2
 else
-  echo "Unknown project type; enter one of: cli, crna, expo"
+  echo "Unknown project type; enter one of: cli, expo"
   exit 1
 fi
 
