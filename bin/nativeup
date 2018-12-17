@@ -27,7 +27,7 @@ git commit -m "Add Mocha, Chai, and Sinon"
 yarn add --dev enzyme \
                enzyme-adapter-react-16 \
                @jonny/react-native-mock
-cp -R "${DIR}/template/tests" tests
+cp -R "${DIR}/template/test" test
 git add .
 git commit -m "Add Enzyme"
 

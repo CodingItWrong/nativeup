@@ -38,7 +38,7 @@ The following changes to `package.json` need to be made manually after running t
 - Add lint NPM script:
 
 ```diff
-+    `"lint": "eslint *.js e2e/*.js tests/**/*.js"`
++    `"lint": "eslint *.js e2e/*.js test/**/*.js"`
 ```
 
 - Configure Detox. If using `expo`, use the following:
