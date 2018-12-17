@@ -32,7 +32,7 @@ The following changes to `package.json` need to be made manually after running t
 
 ```diff
 -    "test": "jest"
-+    "test": "mocha --require @babel/register --require tests/setup.js tests/**/*.spec.js",
++    "test": "mocha",
 ```
 
 - Add lint NPM script:
