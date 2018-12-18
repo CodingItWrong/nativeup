@@ -61,3 +61,12 @@ git commit -m "Remove boilerplate"
 cp "${DIR}/template/.npmrc" .npmrc
 git add .
 git commit -m "Prevent package lock"
+
+if [ "$1" = "cli" ]; then
+  cp "${DIR}/template/README.cli.md" README.md
+fi
+if [ "$1" = "expo" ]; then
+  cp "${DIR}/template/README.expo.md" README.md
+fi
+git add .
+git commit -m "Add default README"
