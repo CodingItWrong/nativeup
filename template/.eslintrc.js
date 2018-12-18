@@ -5,24 +5,18 @@ module.exports = {
   ],
   settings: {
     react: {
-      version: "16.6",
+      version: '16.5',
     },
   },
   parser: 'babel-eslint',
   plugins: [
     'detox',
+    'jest',
   ],
   env: {
     'detox/detox': true,
-    node: true,
-  },
-  globals: {
-    after: true,
-    afterEach: true,
-    before: true,
-    beforeEach: true,
-    describe: true,
-    it: true,
+    'jest/globals': true,
+    'node': true,
   },
   rules: {
     'react/prop-types': 'off',

@@ -16,22 +16,18 @@ git init .
 git add .
 git commit -m "Create react native app with $1"
 
-yarn remove jest babel-jest
-git add .
-git commit -m "Remove Jest"
+if [ "$1" = "expo" ]; then
+  yarn add --dev jest-expo
+  git add .
+  git commit -m "Add Jest"
+fi
 
-yarn add --dev mocha chai sinon sinon-chai
+yarn add --dev react-native-testing-library \
+               react-test-renderer
 git add .
-git commit -m "Add Mocha, Chai, and Sinon"
+git commit -m "Add react-native-testing-library"
 
-yarn add --dev enzyme \
-               enzyme-adapter-react-16 \
-               @jonny/react-native-mock
-cp -R "${DIR}/template/test" test
-git add .
-git commit -m "Add Enzyme"
-
-yarn add --dev detox
+yarn add --dev detox mocha
 detox init -r mocha
 if [ "$1" = "expo" ]; then
   yarn add --dev detox-expo-helpers expo-detox-hook
@@ -43,13 +39,14 @@ if [ "$1" = "expo" ]; then
   echo "bin/Exponent.app" >> .gitignore
 fi
 git add .
-git commit -m "Add Detox"
+git commit -m "Add Detox with Mocha"
 
 yarn add -D eslint \
             babel-eslint \
             eslint-config-codingitwrong \
             eslint-plugin-detox \
             eslint-plugin-import \
+            eslint-plugin-jest \
             eslint-plugin-jsx-a11y \
             eslint-plugin-react
 cp "${DIR}/template/.eslintrc.js" .eslintrc.js
