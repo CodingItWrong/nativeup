@@ -4,12 +4,12 @@ React Native project setup script, using:
 
 - Initialized with either `react-native` CLI or Expo
 - ESLint
-- Mocha unit testing
-- Enzyme component testing
-- Detox end-to-end testing
+- Jest unit testing
+- `react-native-testing-library` component testing
+- Detox end-to-end testing using Mocha
 - Git repo initialized
 
-To learn more about using Mocha, Enzyme, and Detox for testing, visit [reactnativetesting.io](https://reactnativetesting.io)
+To learn more about these testing tools, visit [reactnativetesting.io](https://reactnativetesting.io)
 
 ## Usage
 
