@@ -28,11 +28,10 @@ Where `[projecttype]` is one of:
 
 The following changes to `package.json` need to be made manually after running the script:
 
-- Change the `yarn test` script to run Mocha with the following settings:
+- Add or update the `yarn test` script the following:
 
 ```diff
--    "test": "jest"
-+    "test": "mocha",
+"test": "node_modules/.bin/jest test/**/*.spec.js",
 ```
 
 - Add lint NPM script:
