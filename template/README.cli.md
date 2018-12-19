@@ -24,7 +24,7 @@ Then, in another terminal, run one of:
 
 ```bash
 $ react-native run-ios
-$ reqct-native run-android
+$ react-native run-android
 ```
 
 ## Testing
