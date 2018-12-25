@@ -3,11 +3,16 @@
 React Native project setup script, using:
 
 - Initialized with either `react-native` CLI or Expo
+- Reactotron for debugging, including network requests
 - ESLint
-- Jest unit testing
-- `react-native-testing-library` component testing
-- Detox end-to-end testing using Mocha
 - Git repo initialized
+- Authenticated Web Service
+  - Axios for the client
+  - `@codingitwrong/react-login` for the login form
+- Testing
+  - Jest unit testing
+  - `react-native-testing-library` component testing
+  - Detox end-to-end testing
 
 To learn more about these testing tools, visit [reactnativetesting.io](https://reactnativetesting.io)
 

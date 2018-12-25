@@ -53,10 +53,18 @@ cp "${DIR}/template/.eslintrc.js" .eslintrc.js
 git add .
 git commit -m "Add ESLint"
 
-rm e2e/firstTest.spec.js
+yarn add -D reactotron-react-native
+cp "${DIR}/template/ReactotronConfig.js" ReactotronConfig.js
+git add .
+git commit -m "Add Reactotron"
+
+yarn add -D axios \
+            @codingitwrong/react-login
+cp "${DIR}/template/api.js" api.js
+cp "${DIR}/template/Auth.js" Auth.js
 cp "${DIR}/template/App.js" App.js
 git add .
-git commit -m "Remove boilerplate"
+git commit -m "Add OAuth2"
 
 cp "${DIR}/template/.npmrc" .npmrc
 git add .
