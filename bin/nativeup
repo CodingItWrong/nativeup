@@ -27,8 +27,8 @@ yarn add --dev react-native-testing-library \
 git add .
 git commit -m "Add react-native-testing-library"
 
-yarn add --dev detox mocha
-detox init -r mocha
+yarn add --dev detox
+detox init -r jest
 if [ "$1" = "expo" ]; then
   yarn add --dev detox-expo-helpers expo-detox-hook
 
@@ -39,7 +39,7 @@ if [ "$1" = "expo" ]; then
   echo "bin/Exponent.app" >> .gitignore
 fi
 git add .
-git commit -m "Add Detox with Mocha"
+git commit -m "Add Detox with Jest"
 
 yarn add -D eslint \
             babel-eslint \

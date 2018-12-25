@@ -46,8 +46,8 @@ The following changes to `package.json` need to be made manually after running t
  {
    ...
    "detox": {
--    "test-runner": "mocha"
-+    "test-runner": "mocha",
+-    "test-runner": "jest"
++    "test-runner": "jest",
 +    "configurations": {
 +      "ios.sim": {
 +        "binaryPath": "bin/Exponent.app",
@@ -66,8 +66,8 @@ If using `cli`, use the following, replacing `YourAppName` with the name of the 
  {
    ...
    "detox": {
--    "test-runner": "mocha"
-+    "test-runner": "mocha",
+-    "test-runner": "jest"
++    "test-runner": "jest",
 +    "configurations": {
 +      "ios.sim.debug": {
 +        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/YourAppName.app",
