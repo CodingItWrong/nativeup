@@ -16,6 +16,10 @@ git init .
 git add .
 git commit -m "Create react native app with $1"
 
+cp "${DIR}/template/.npmrc" .npmrc
+git add .
+git commit -m "Prevent package lock"
+
 if [ "$1" = "expo" ]; then
   yarn add --dev jest-expo
   git add .
@@ -53,10 +57,18 @@ cp "${DIR}/template/.eslintrc.js" .eslintrc.js
 git add .
 git commit -m "Add ESLint"
 
+yarn add lodash-es
+git add .
+git commit -m "Add Lodash-ES"
+
 yarn add -D reactotron-react-native
 cp "${DIR}/template/ReactotronConfig.js" ReactotronConfig.js
 git add .
 git commit -m "Add Reactotron"
+
+npx -p @storybook/cli sb init
+git add .
+git commit -m "Add Storybook"
 
 yarn add -D axios \
             @codingitwrong/react-login
@@ -66,9 +78,11 @@ cp "${DIR}/template/App.js" App.js
 git add .
 git commit -m "Add OAuth2"
 
-cp "${DIR}/template/.npmrc" .npmrc
+yarn add -D mobx \
+            mobx-react \
+            @reststate/mobx
 git add .
-git commit -m "Prevent package lock"
+git commit -m "Add @reststate/mobx"
 
 if [ "$1" = "cli" ]; then
   cp "${DIR}/template/README.cli.md" README.md

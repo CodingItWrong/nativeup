@@ -3,12 +3,15 @@
 React Native project setup script, using:
 
 - Initialized with either `react-native` CLI or Expo
+- Lodash-ES for utility functions
 - Reactotron for debugging, including network requests
+- Storybook for viewing and designing components
 - ESLint
 - Git repo initialized
 - Authenticated Web Service
   - Axios for the client
   - `@codingitwrong/react-login` for the login form
+  - `@reststate/mobx` for the data layer
 - Testing
   - Jest unit testing
   - `react-native-testing-library` component testing
