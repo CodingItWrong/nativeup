@@ -48,12 +48,15 @@ git commit -m "Add Detox with Jest"
 yarn add -D eslint \
             babel-eslint \
             eslint-config-codingitwrong \
+            eslint-config-prettier \
             eslint-plugin-detox \
             eslint-plugin-import \
             eslint-plugin-jest \
             eslint-plugin-jsx-a11y \
+            eslint-plugin-prettier \
             eslint-plugin-react
 cp "${DIR}/template/.eslintrc.js" .eslintrc.js
+cp "${DIR}/template/.prettierrc.js" .prettierrc.js
 git add .
 git commit -m "Add ESLint"
 

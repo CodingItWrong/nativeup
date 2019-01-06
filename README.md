@@ -6,7 +6,7 @@ React Native project setup script, using:
 - Lodash-ES for utility functions
 - Reactotron for debugging, including network requests
 - Storybook for viewing and designing components
-- ESLint
+- ESLint and Prettier
 - Git repo initialized
 - Authenticated Web Service
   - Axios for the client
@@ -42,10 +42,11 @@ The following changes to `package.json` need to be made manually after running t
 "test": "node_modules/.bin/jest test/**/*.spec.js",
 ```
 
-- Add lint NPM script:
+- Add lint and format NPM script:
 
 ```diff
-"lint": "eslint *.js e2e/*.spec.js test/**/*.spec.js",
++ "lint": "eslint \"**/*.js\"",
++ "format": "prettier --write \"**/*.js\"",
 ```
 
 - Configure Detox. If using `expo`, use the following:

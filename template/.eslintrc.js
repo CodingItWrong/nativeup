@@ -2,6 +2,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'codingitwrong',
+    'plugin:prettier/recommended',
   ],
   settings: {
     react: {
