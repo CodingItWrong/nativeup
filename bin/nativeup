@@ -87,9 +87,8 @@ git commit -m "Add Storybook"
 
 yarn add axios \
          @codingitwrong/react-login
-cp "${DIR}/template/api.js" api.js
-cp "${DIR}/template/Auth.js" Auth.js
 cp "${DIR}/template/App.js" App.js
+cp -r "${DIR}/template/src" src
 git add .
 git commit -m "Add OAuth2"
 

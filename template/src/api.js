@@ -1,6 +1,5 @@
 import axios from 'axios';
 import Reactotron from 'reactotron-react-native';
-import Expo from 'expo';
 import { AsyncStorage } from 'react-native';
 
 const tokenStorageKey = /* ENTER A KEY HERE */;
