@@ -65,11 +65,12 @@ yarn add -D eslint \
             eslint-plugin-import \
             eslint-plugin-jsx-a11y \
             eslint-plugin-prettier \
-            eslint-plugin-react
+            eslint-plugin-react \
+            prettier
 cp "${DIR}/template/.eslintrc.js" .eslintrc.js
 cp "${DIR}/template/.prettierrc.js" .prettierrc.js
 git add .
-git commit -m "Add ESLint"
+git commit -m "Add ESLint and Prettier"
 
 yarn add lodash-es
 git add .
