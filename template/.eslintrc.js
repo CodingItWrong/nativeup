@@ -20,6 +20,7 @@ module.exports = {
     'node': true,
   },
   globals: {
+    '__DEV__': true,
     'after': true,
     'afterEach': true,
     'before': true,
@@ -30,6 +31,7 @@ module.exports = {
     'sinon': true
   },
   rules: {
+    'react/no-unescaped-entities': 'off',
     'react/prop-types': 'off',
   }
 };
