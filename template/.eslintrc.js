@@ -12,13 +12,11 @@ module.exports = {
   parser: 'babel-eslint',
   plugins: [
     'detox',
-    'jest',
   ],
   env: {
     'browser': true,
     'detox/detox': true,
     'es6': true,
-    'jest/globals': true,
     'node': true,
   },
   globals: {
