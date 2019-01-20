@@ -13,8 +13,8 @@ React Native project setup script, using:
   - `@codingitwrong/react-login` for the login form
   - `@reststate/mobx` for the data layer
 - Testing
-  - Jest unit testing
-  - `react-native-testing-library` component testing
+  - Mocha unit testing
+  - Enzyme component testing
   - Detox end-to-end testing
 
 To learn more about these testing tools, visit [reactnativetesting.io](https://reactnativetesting.io)
@@ -38,8 +38,8 @@ The following changes to `package.json` need to be made manually after running t
 
 - Add or update the `yarn test` script the following:
 
-```diff
-"test": "node_modules/.bin/jest test/**/*.spec.js",
+```sh
+"test": "mocha test/**/*.spec.js",
 ```
 
 - Add lint and format NPM script:
@@ -55,8 +55,8 @@ The following changes to `package.json` need to be made manually after running t
  {
    ...
    "detox": {
--    "test-runner": "jest"
-+    "test-runner": "jest",
+-    "test-runner": "mocha"
++    "test-runner": "mocha",
 +    "configurations": {
 +      "ios.sim": {
 +        "binaryPath": "bin/Exponent.app",
@@ -75,8 +75,8 @@ If using `cli`, use the following, replacing `YourAppName` with the name of the 
  {
    ...
    "detox": {
--    "test-runner": "jest"
-+    "test-runner": "jest",
+-    "test-runner": "mocha"
++    "test-runner": "mocha",
 +    "configurations": {
 +      "ios.sim.debug": {
 +        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/YourAppName.app",

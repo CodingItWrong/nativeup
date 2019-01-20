@@ -21,6 +21,16 @@ module.exports = {
     'jest/globals': true,
     'node': true,
   },
+  globals: {
+    'after': true,
+    'afterEach': true,
+    'before': true,
+    'beforeEach': true,
+    'describe': true,
+    'expect': true,
+    'it': true,
+    'sinon': true
+  },
   rules: {
     'react/prop-types': 'off',
   }
