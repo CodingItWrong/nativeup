@@ -6,7 +6,7 @@ A brief description of your app.
 
 - [Yarn](https://yarnpkg.com/en/docs/install)
 - [Expo CLI](https://facebook.github.io/react-native/docs/getting-started)
-- [Detox](https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md)
+- [Detox CLI](https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md)
 
 ## Installation
 
