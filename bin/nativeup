@@ -84,17 +84,17 @@ npx -p @storybook/cli sb init
 git add .
 git commit -m "Add Storybook"
 
-yarn add -D axios \
-            @codingitwrong/react-login
+yarn add axios \
+         @codingitwrong/react-login
 cp "${DIR}/template/api.js" api.js
 cp "${DIR}/template/Auth.js" Auth.js
 cp "${DIR}/template/App.js" App.js
 git add .
 git commit -m "Add OAuth2"
 
-yarn add -D mobx \
-            mobx-react \
-            @reststate/mobx
+yarn add mobx \
+         mobx-react \
+         @reststate/mobx
 git add .
 git commit -m "Add @reststate/mobx"
 
