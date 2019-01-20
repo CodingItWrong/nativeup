@@ -53,6 +53,10 @@ if [ "$1" = "expo" ]; then
   tar xzvf Exponent.tar.gz --directory bin/Exponent.app
   rm Exponent.tar.gz
   echo "bin/Exponent.app" >> .gitignore
+
+  cp "${DIR}/template/e2e/firstTest.expo.spec.js" e2e/firstTest.spec.js
+else
+  cp "${DIR}/template/e2e/firstTest.cli.spec.js" e2e/firstTest.spec.js
 fi
 git add .
 git commit -m "Add Detox"

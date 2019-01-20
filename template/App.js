@@ -9,11 +9,14 @@ if (__DEV__) {
 export default class App extends React.Component {
   render() {
     return (
-      <Auth>
-        <View>
-          <Text>Hello, world</Text>
-        </View>
-      </Auth>
+      <View>
+        <Text testID="welcome">Hello, world</Text>
+        <Auth>
+          <View>
+            <Text>Logged in</Text>
+          </View>
+        </Auth>
+      </View>
     );
   }
 }
