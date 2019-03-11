@@ -10,28 +10,26 @@ module.exports = {
     },
   },
   parser: 'babel-eslint',
-  plugins: [
-    'detox',
-  ],
+  plugins: ['detox'],
   env: {
-    'browser': true,
+    browser: true,
     'detox/detox': true,
-    'es6': true,
-    'node': true,
+    es6: true,
+    node: true,
   },
   globals: {
-    '__DEV__': true,
-    'after': true,
-    'afterEach': true,
-    'before': true,
-    'beforeEach': true,
-    'describe': true,
-    'expect': true,
-    'it': true,
-    'sinon': true
+    __DEV__: true,
+    after: true,
+    afterEach: true,
+    before: true,
+    beforeEach: true,
+    describe: true,
+    expect: true,
+    it: true,
+    sinon: true,
   },
   rules: {
     'react/no-unescaped-entities': 'off',
     'react/prop-types': 'off',
-  }
+  },
 };
