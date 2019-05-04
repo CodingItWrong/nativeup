@@ -3,7 +3,7 @@ import Reactotron from 'reactotron-react-native';
 import { AsyncStorage } from 'react-native';
 
 const tokenStorageKey = /* ENTER A KEY HERE */;
-const baseURL = 'http://localhost:3000'
+const baseURL = 'http://localhost:3000';
 
 const api = axios.create({
   baseURL,
@@ -13,11 +13,10 @@ const api = axios.create({
 });
 
 export function loadToken() {
-  return AsyncStorage.getItem(tokenStorageKey)
-    .then(token => {
-      setAuthHeader(token);
-      return token;
-    });
+  return AsyncStorage.getItem(tokenStorageKey).then(token => {
+    setAuthHeader(token);
+    return token;
+  });
 }
 
 export function setToken(token) {
