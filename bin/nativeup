@@ -20,31 +20,18 @@ cp "${DIR}/template/.npmrc" .npmrc
 git add .
 git commit -m "Prevent package lock"
 
-if [ "$1" = "cli" ]; then
-  yarn remove jest babel-jest
+if [ "$1" = "expo" ]; then
+  yarn add --dev jest babel-jest
   git add .
-  git commit -m "Remove Jest"
+  git commit -m "Add Jest"
 fi
 
-yarn add --dev mocha \
-               chai \
-               sinon \
-               sinon-chai
+yarn add --dev react-native-testing-library
 git add .
-git commit -m "Add Mocha"
-
-yarn add --dev enzyme \
-               enzyme-adapter-react-16 \
-               @jonny/react-native-mock
-git add .
-git commit -m "Add Enzyme"
-
-cp -r "${DIR}/template/test" test
-git add .
-git commit -m "Configure Mocha"
+git commit -m "Add RNTL"
 
 yarn add --dev detox
-detox init -r mocha
+detox init -r jest
 if [ "$1" = "expo" ]; then
   yarn add --dev detox-expo-helpers expo-detox-hook
 
@@ -67,6 +54,7 @@ yarn add -D eslint \
             eslint-config-prettier \
             eslint-plugin-detox \
             eslint-plugin-import \
+            eslint-plugin-jest \
             eslint-plugin-jsx-a11y \
             eslint-plugin-prettier \
             eslint-plugin-react \

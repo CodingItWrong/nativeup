@@ -13,8 +13,8 @@ React Native project setup script, using:
   - [`@codingitwrong/react-login`][react-login] for the login form
   - [`@reststate/mobx`][reststate-mobx] for the data layer
 - Testing
-  - [Mocha][mocha] unit testing
-  - [Enzyme][enzyme] component testing
+  - [Jest][jest] unit testing
+  - [React Native Testing Library][rntl] component testing
   - [Detox][detox] end-to-end testing
 
 To learn more about these testing tools, visit [reactnativetesting.io](https://reactnativetesting.io)
@@ -43,10 +43,10 @@ Where `[projecttype]` is one of:
 
 The following changes to `package.json` need to be made manually after running the script:
 
-- Add or update the `yarn test` script the following:
+- If there isn't a `yarn test` script, add the following:
 
 ```sh
-"test": "mocha test/**/*.spec.js",
+"test": "jest",
 ```
 
 - Add lint and format NPM script:
@@ -62,8 +62,8 @@ The following changes to `package.json` need to be made manually after running t
  {
    ...
    "detox": {
--    "test-runner": "mocha"
-+    "test-runner": "mocha",
+-    "test-runner": "jest"
++    "test-runner": "jest",
 +    "configurations": {
 +      "ios.sim": {
 +        "binaryPath": "bin/Exponent.app",
@@ -82,8 +82,8 @@ If using `cli`, use the following, replacing `YourAppName` with the name of the 
  {
    ...
    "detox": {
--    "test-runner": "mocha"
-+    "test-runner": "mocha",
+-    "test-runner": "jest"
++    "test-runner": "jest",
 +    "configurations": {
 +      "ios.sim.debug": {
 +        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/YourAppName.app",
@@ -103,12 +103,12 @@ Apache-2.0
 [axios]: https://github.com/axios/axios
 [detox]: https://github.com/wix/Detox
 [detox-installation]: https://reactnativetesting.io/e2e/setup.html#installing-detox
-[enzyme]: https://airbnb.io/enzyme/
 [eslint]: https://eslint.org/
-[mocha]: https://mochajs.org/
+[jest]: https://jestjs.io/
 [prettier]: https://prettier.io/
 [react-login]: https://github.com/CodingItWrong/react-login
 [reactotron]: https://github.com/infinitered/reactotron
 [reststate-mobx]: https://mobx.reststate.org/
+[rntl]: https://callstack.github.io/react-native-testing-library/
 [storybook]: https://storybook.js.org/
 [yarn]: https://yarnpkg.com/en/docs/install
