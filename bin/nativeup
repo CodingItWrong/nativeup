@@ -83,7 +83,9 @@ git add .
 git commit -m "Add Storybook"
 
 yarn add axios \
-         @codingitwrong/react-login
+         @codingitwrong/react-login \
+         @react-native-community/async-storage
+react-native link @react-native-community/async-storage
 cp "${DIR}/template/App.js" App.js
 cp -r "${DIR}/template/src" src
 git add .

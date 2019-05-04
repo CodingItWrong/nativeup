@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Reactotron from 'reactotron-react-native';
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 
 const tokenStorageKey = /* ENTER A KEY HERE */;
 const baseURL = 'http://localhost:3000';
