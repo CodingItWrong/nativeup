@@ -48,6 +48,11 @@ fi
 git add .
 git commit -m "Add Detox"
 
+yarn add react-native-config
+react-native link react-native-config
+git add .
+git commit -m "Add RN Config"
+
 yarn add -D eslint \
             babel-eslint \
             eslint-config-codingitwrong \

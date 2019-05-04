@@ -15,7 +15,7 @@ React Native project setup script, using:
 - Testing
   - [Jest][jest] unit testing
   - [React Native Testing Library][rntl] component testing
-  - [Detox][detox] end-to-end testing
+  - [Detox][detox] end-to-end testing, with [React Native Config][rn-config] for test-specific configuration
 
 To learn more about these testing tools, visit [reactnativetesting.io](https://reactnativetesting.io)
 
@@ -110,5 +110,6 @@ Apache-2.0
 [reactotron]: https://github.com/infinitered/reactotron
 [reststate-mobx]: https://mobx.reststate.org/
 [rntl]: https://callstack.github.io/react-native-testing-library/
+[rn-config]: https://github.com/luggit/react-native-config
 [storybook]: https://storybook.js.org/
 [yarn]: https://yarnpkg.com/en/docs/install
