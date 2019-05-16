@@ -87,7 +87,7 @@ If using `cli`, use the following, replacing `YourAppName` with the name of the 
 +    "configurations": {
 +      "ios.sim.debug": {
 +        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/YourAppName.app",
-+        "build": "xcodebuild -project ios/YourAppName.xcodeproj -scheme YourAppName -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
++        "build": "ENVFILE=.env.detox xcodebuild -project ios/YourAppName.xcodeproj -scheme YourAppName -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
 +        "type": "ios.simulator",
 +        "name": "iPhone 8"
 +      }
