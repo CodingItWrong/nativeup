@@ -62,6 +62,12 @@ git commit -m "Switch to CodingItWrong ESLint and Prettier"
 
 yarn add react-navigation \
          react-native-gesture-handler
+git add .
+git commit -m "Add React Navigation"
+
+yarn add formik
+git add .
+git commit -m "Add Formik"
 
 yarn add lodash-es
 git add .

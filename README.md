@@ -3,14 +3,15 @@
 React Native project setup script, using:
 
 - Initialized with either `react-native` CLI or Expo
+- [React Navigation][react-navigation]
+- [Formik][formik] for forms
 - Lodash-ES for utility functions
 - [Reactotron][reactotron] for debugging, including network requests
 - [Storybook][storybook] for viewing and designing components
 - [ESLint][eslint] and [Prettier][prettier]
 - Git repo initialized
-- Authenticated Web Service
+- JSON:API based data layer
   - [Axios][axios] for the client
-  - [`@codingitwrong/react-login`][react-login] for the login form
   - [`@reststate/mobx`][reststate-mobx] for the data layer
 - Testing
   - [Jest][jest] unit testing
@@ -75,7 +76,6 @@ The following changes to `package.json` need to be made manually after running t
  }
 ```
 
-
 If using `cli`, use the following, replacing `YourAppName` with the name of the app you entered:
 
 ```diff
@@ -104,9 +104,10 @@ Apache-2.0
 [detox]: https://github.com/wix/Detox
 [detox-installation]: https://reactnativetesting.io/e2e/setup.html#installing-detox
 [eslint]: https://eslint.org/
+[formik]: https://jaredpalmer.com/formik/
 [jest]: https://jestjs.io/
 [prettier]: https://prettier.io/
-[react-login]: https://github.com/CodingItWrong/react-login
+[react-navigation]: https://reactnavigation.org/
 [reactotron]: https://github.com/infinitered/reactotron
 [reststate-mobx]: https://mobx.reststate.org/
 [rntl]: https://callstack.github.io/react-native-testing-library/
