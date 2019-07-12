@@ -67,6 +67,12 @@ react-native link react-native-gesture-handler
 git add .
 git commit -m "Add React Navigation"
 
+mkdir src
+cp "${DIR}/template/App.js" App.js
+cp -r "${DIR}/template/src/screens" src/screens
+git add .
+git commit -m "Add sample React Navigation screens"
+
 yarn add formik
 git add .
 git commit -m "Add Formik"
@@ -84,7 +90,6 @@ npx -p @storybook/cli sb init
 git add .
 git commit -m "Add Storybook"
 
-mkdir src
 yarn add axios
 if [ "$1" = "cli" ]; then
   yarn add react-native-config
