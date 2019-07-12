@@ -77,7 +77,6 @@ mkdir src
 yarn add axios
 if [ "$1" = "cli" ]; then
   yarn add react-native-config
-  react-native link react-native-config
   cp -r "${DIR}/template/src/api.cli" src/api
   cp "${DIR}/template/src/api.js" src/api/remote.js
   cp "${DIR}/template/.env" .env
