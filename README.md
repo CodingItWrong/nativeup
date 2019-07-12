@@ -57,26 +57,7 @@ The following changes to `package.json` need to be made manually after running t
 +    "format": "prettier --write \"**/*.js\"",
 ```
 
-- Configure Detox. If using `expo`, use the following:
-
-```diff
- {
-   ...
-   "detox": {
--    "test-runner": "jest"
-+    "test-runner": "jest",
-+    "configurations": {
-+      "ios.sim": {
-+        "binaryPath": "bin/Exponent.app",
-+        "type": "ios.simulator",
-+        "name": "iPhone 7"
-+      }
-+    }
-   }
- }
-```
-
-If using `cli`, use the following, replacing `YourAppName` with the name of the app you entered:
+- If using `cli`, configure Detox, replacing `YourAppName` with the name of the app you entered:
 
 ```diff
  {
