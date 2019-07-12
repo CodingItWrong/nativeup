@@ -5,7 +5,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
 if [ "$1" = "cli" ]; then
   react-native init $2 --version 0.59.10
 elif [ "$1" = "expo" ]; then
-  expo init -t blank --yarn $2
+  expo init -t blank --yarn --name $2 $2
 else
   echo "Unknown project type; enter one of: cli, expo"
   exit 1
