@@ -1,9 +1,7 @@
 # nativeup
 
-Script to set up a new React Native project with a full suite of libraries, including:
+Script to set up a new React Native CLI or Expo project with a full suite of libraries, including:
 
-- Initialized with either `react-native` CLI or Expo
-- Git repo initialized
 - **Navigation:** [React Navigation][react-navigation]
 - **Forms:** [Formik][formik]
 - **Validation:** [Yup][yup]
@@ -18,8 +16,6 @@ Script to set up a new React Native project with a full suite of libraries, incl
 - **Logging:** [Reactotron][reactotron]
 - **Utility Functions:** Lodash-ES
 - **Code Standardization:** [ESLint][eslint] and [Prettier][prettier]
-
-To learn more about these testing tools, visit [reactnativetesting.io](https://reactnativetesting.io)
 
 ## Requirements
 
