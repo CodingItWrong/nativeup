@@ -31,6 +31,7 @@ git add .
 git commit -m "Add RNTL"
 
 if [ "$1" = "cli" ]; then
+  yarn add --dev detox
   detox init -r jest
   git add .
   git commit -m "Add Detox"
