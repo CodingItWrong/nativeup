@@ -67,9 +67,9 @@ react-native link react-native-gesture-handler
 git add .
 git commit -m "Add React Navigation"
 
-yarn add formik
+yarn add formik yup
 git add .
-git commit -m "Add Formik"
+git commit -m "Add Formik and Yup"
 
 yarn add lodash-es
 git add .

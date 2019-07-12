@@ -4,7 +4,7 @@ React Native project setup script, using:
 
 - Initialized with either `react-native` CLI or Expo
 - [React Navigation][react-navigation]
-- [Formik][formik] for forms
+- [Formik][formik] and [Yup][yup] for forms
 - Lodash-ES for utility functions
 - [Reactotron][reactotron] for debugging, including network requests
 - [Storybook][storybook] for viewing and designing components
@@ -95,3 +95,4 @@ Apache-2.0
 [rn-config]: https://github.com/luggit/react-native-config
 [storybook]: https://storybook.js.org/
 [yarn]: https://yarnpkg.com/en/docs/install
+[yup]: https://github.com/jquense/yup
