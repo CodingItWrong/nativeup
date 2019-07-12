@@ -86,7 +86,7 @@ cp "${DIR}/template/ReactotronConfig.js" ReactotronConfig.js
 git add .
 git commit -m "Add Reactotron"
 
-npx -p @storybook/cli sb init
+npx -p @storybook/cli sb init --yes
 git add .
 git commit -m "Add Storybook"
 
