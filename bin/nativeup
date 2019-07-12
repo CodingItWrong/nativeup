@@ -30,37 +30,29 @@ yarn add --dev react-native-testing-library
 git add .
 git commit -m "Add RNTL"
 
-yarn add --dev detox
-detox init -r jest
-if [ "$1" = "expo" ]; then
-  yarn add --dev detox-expo-helpers expo-detox-hook
-
-  curl https://dpq5q02fu5f55.cloudfront.net/Exponent-2.10.0.tar.gz -o Exponent.tar.gz
-  mkdir -p bin/Exponent.app
-  tar xzvf Exponent.tar.gz --directory bin/Exponent.app
-  rm Exponent.tar.gz
-  echo "bin/Exponent.app" >> .gitignore
-
-  cp "${DIR}/template/e2e/firstTest.expo.spec.js" e2e/firstTest.spec.js
-else
-  cp "${DIR}/template/e2e/firstTest.cli.spec.js" e2e/firstTest.spec.js
+if [ "$1" = "cli" ]; then
+  detox init -r jest
+  git add .
+  git commit -m "Add Detox"
 fi
-git add .
-git commit -m "Add Detox"
 
-yarn add -D eslint \
-            babel-eslint \
-            eslint-config-codingitwrong \
-            eslint-config-prettier \
-            eslint-plugin-detox \
-            eslint-plugin-import \
-            eslint-plugin-jest \
-            eslint-plugin-jsx-a11y \
-            eslint-plugin-prettier \
-            eslint-plugin-react \
-            prettier
-cp "${DIR}/template/.eslintrc.js" .eslintrc.js
+yarn add --dev eslint \
+               babel-eslint \
+               eslint-config-codingitwrong \
+               eslint-config-prettier \
+               eslint-plugin-import \
+               eslint-plugin-jest \
+               eslint-plugin-jsx-a11y \
+               eslint-plugin-prettier \
+               eslint-plugin-react \
+               prettier
 cp "${DIR}/template/.prettierrc.js" .prettierrc.js
+if [ "$1" = "cli" ]; then
+  yarn add --dev detox eslint-plugin-detox
+  cp "${DIR}/template/.eslintrc.cli.js" .eslintrc.js
+elif [ "$1" = "expo" ]; then
+  cp "${DIR}/template/.eslintrc.expo.js" .eslintrc.js
+fi
 git add .
 git commit -m "Add ESLint and Prettier"
 
