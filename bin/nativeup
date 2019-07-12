@@ -60,6 +60,9 @@ fi
 git add .
 git commit -m "Switch to CodingItWrong ESLint and Prettier"
 
+yarn add react-navigation \
+         react-native-gesture-handler
+
 yarn add lodash-es
 git add .
 git commit -m "Add Lodash-ES"
