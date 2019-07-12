@@ -63,6 +63,7 @@ git commit -m "Switch to CodingItWrong ESLint and Prettier"
 
 yarn add react-navigation \
          react-native-gesture-handler
+react-native link react-native-gesture-handler
 git add .
 git commit -m "Add React Navigation"
 
