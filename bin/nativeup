@@ -36,8 +36,12 @@ if [ "$1" = "cli" ]; then
   git commit -m "Add Detox"
 fi
 
-yarn add --dev eslint \
-               babel-eslint \
+if [ "$1" = "cli" ]; then
+  yarn remove @react-native-community/eslint-config
+elif [ "$1" = "expo" ]; then
+  yarn add --dev eslint
+end
+yarn add --dev babel-eslint \
                eslint-config-codingitwrong \
                eslint-config-prettier \
                eslint-plugin-import \
@@ -54,7 +58,7 @@ elif [ "$1" = "expo" ]; then
   cp "${DIR}/template/.eslintrc.expo.js" .eslintrc.js
 fi
 git add .
-git commit -m "Add ESLint and Prettier"
+git commit -m "Switch to CodingItWrong ESLint and Prettier"
 
 yarn add lodash-es
 git add .
