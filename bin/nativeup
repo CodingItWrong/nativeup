@@ -69,15 +69,19 @@ npx -p @storybook/cli sb init
 git add .
 git commit -m "Add Storybook"
 
-yarn add axios \
-         react-native-config
-react-native link react-native-config
 mkdir src
-cp -r "${DIR}/template/src/api" src/api
-cp "${DIR}/template/.env" .env
-cp "${DIR}/template/.env.detox" .env.detox
+yarn add axios
+if [ "$1" = "cli" ]; then
+  yarn add react-native-config
+  react-native link react-native-config
+  cp -r "${DIR}/template/src/api.cli" src/api
+  cp "${DIR}/template/.env" .env
+  cp "${DIR}/template/.env.detox" .env.detox
+elif [ "$1" = "expo" ]; then
+  cp -r "${DIR}/template/src/api.expo.js" src/api.js
+fi
 git add .
-git commit -m "Add Axios and environment-specific config"
+git commit -m "Add Axios"
 
 yarn add mobx \
          mobx-react \
