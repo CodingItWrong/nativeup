@@ -1,25 +1,46 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import Reactotron from 'reactotron-react-native';
+import { observer } from 'mobx-react';
+import { FlatList, View, Text, Button } from 'react-native';
+import { widgetStore } from '../stores';
 
-export default class HomeScreen extends React.Component {
+class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',
   };
 
+  componentDidMount() {
+    widgetStore.loadAll();
+  }
+
   render() {
+    if (widgetStore.loading) {
+      return <Text>Loading…</Text>;
+    } else if (widgetStore.error) {
+      return <Text>An error occurred loading widgets.</Text>;
+    }
+
     return (
-      <View>
-        <Text>Home Screen</Text>
-        <Button
-          title="Go to Details"
-          onPress={() => {
-            this.props.navigation.navigate('Details', {
-              itemId: 86,
-              otherParam: 'anything you want here',
-            });
-          }}
+      <View style={{ flex: 1 }}>
+        <FlatList
+          data={widgetStore.all().slice()}
+          keyExtractor={item => item.id}
+          renderItem={({ item }) => (
+            <View>
+              <Button
+                title={item.attributes.name}
+                onPress={() => {
+                  this.props.navigation.navigate('Details', {
+                    widget: item,
+                  });
+                }}
+              />
+            </View>
+          )}
         />
       </View>
     );
   }
 }
+
+export default observer(HomeScreen);

@@ -67,12 +67,6 @@ react-native link react-native-gesture-handler
 git add .
 git commit -m "Add React Navigation"
 
-mkdir src
-cp "${DIR}/template/App.js" App.js
-cp -r "${DIR}/template/src/screens" src/screens
-git add .
-git commit -m "Add sample React Navigation screens"
-
 yarn add formik
 git add .
 git commit -m "Add Formik"
@@ -91,6 +85,7 @@ git add .
 git commit -m "Add Storybook"
 
 yarn add axios
+mkdir src
 if [ "$1" = "cli" ]; then
   yarn add react-native-config
   react-native link react-native-config
@@ -109,6 +104,12 @@ yarn add mobx \
          @reststate/mobx
 git add .
 git commit -m "Add @reststate/mobx"
+
+cp "${DIR}/template/App.js" App.js
+cp "${DIR}/template/src/stores.js" src/stores.js
+cp -r "${DIR}/template/src/screens" src/screens
+git add .
+git commit -m "Add sample app content"
 
 if [ "$1" = "cli" ]; then
   cp "${DIR}/template/README.cli.md" README.md
