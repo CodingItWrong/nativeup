@@ -1,22 +1,23 @@
 # nativeup
 
-React Native project setup script, using:
+Script to set up a new React Native project with a full suite of libraries, including:
 
 - Initialized with either `react-native` CLI or Expo
-- [React Navigation][react-navigation]
-- [Formik][formik] and [Yup][yup] for forms
-- Lodash-ES for utility functions
-- [Reactotron][reactotron] for debugging, including network requests
-- [Storybook][storybook] for viewing and designing components
-- [ESLint][eslint] and [Prettier][prettier]
 - Git repo initialized
-- JSON:API based data layer
-  - [Axios][axios] for the client
-  - [`@reststate/mobx`][reststate-mobx] for the data layer
-- Testing
-  - [Jest][jest] unit testing
-  - [React Native Testing Library][rntl] component testing
-  - [Detox][detox] end-to-end testing, with [React Native Config][rn-config] for test-specific configuration
+- **Navigation:** [React Navigation][react-navigation]
+- **Forms:** [Formik][formik]
+- **Validation:** [Yup][yup]
+- **Data Layer:**
+  - [`@reststate/mobx`][reststate-mobx] for the JSON:API-based data store
+  - [Axios][axios] for the HTTP client
+- **Component Library:** [Storybook][storybook]
+- **Testing**
+  - Unit Tests: [Jest][jest]
+  - Component Tests: [React Native Testing Library][rntl]
+  - End-to-End Tests: [Detox][detox], with [React Native Config][rn-config] for test-specific configuration
+- **Logging:** [Reactotron][reactotron]
+- **Utility Functions:** Lodash-ES
+- **Code Standardization:** [ESLint][eslint] and [Prettier][prettier]
 
 To learn more about these testing tools, visit [reactnativetesting.io](https://reactnativetesting.io)
 
