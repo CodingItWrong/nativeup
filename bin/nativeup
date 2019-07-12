@@ -41,7 +41,7 @@ if [ "$1" = "cli" ]; then
   yarn remove @react-native-community/eslint-config
 elif [ "$1" = "expo" ]; then
   yarn add --dev eslint
-end
+fi
 yarn add --dev babel-eslint \
                eslint-config-codingitwrong \
                eslint-config-prettier \
