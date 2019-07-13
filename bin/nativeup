@@ -82,10 +82,6 @@ cp "${DIR}/template/ReactotronConfig.js" ReactotronConfig.js
 git add .
 git commit -m "Add Reactotron"
 
-npx -p @storybook/cli sb init --yes
-git add .
-git commit -m "Add Storybook"
-
 yarn add axios
 mkdir src
 if [ "$1" = "cli" ]; then

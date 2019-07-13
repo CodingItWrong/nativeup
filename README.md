@@ -8,7 +8,6 @@ Script to set up a new React Native CLI or Expo project with a full suite of lib
 - **Data Layer:**
   - [`@reststate/mobx`][reststate-mobx] for the JSON:API-based data store
   - [Axios][axios] for the HTTP client
-- **Component Library:** [Storybook][storybook]
 - **Testing**
   - Unit Tests: [Jest][jest]
   - Component Tests: [React Native Testing Library][rntl]
