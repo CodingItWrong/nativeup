@@ -37,29 +37,19 @@ if [ "$1" = "cli" ]; then
   git commit -m "Add Detox"
 fi
 
-if [ "$1" = "cli" ]; then
-  yarn remove @react-native-community/eslint-config
-elif [ "$1" = "expo" ]; then
-  yarn add --dev eslint
-fi
-yarn add --dev babel-eslint \
-               eslint-config-codingitwrong \
-               eslint-config-prettier \
-               eslint-plugin-import \
-               eslint-plugin-jest \
-               eslint-plugin-jsx-a11y \
-               eslint-plugin-prettier \
-               eslint-plugin-react \
-               prettier
-cp "${DIR}/template/.prettierrc.js" .prettierrc.js
-if [ "$1" = "cli" ]; then
+if [ "$1" = "expo" ]; then
+  yarn add --dev @react-native-community/eslint-config \
+                 eslint
+  cp "${DIR}/template/.prettierrc.js" .prettierrc.js
+  cp "${DIR}/template/.eslintrc.expo.js" .eslintrc.js
+  git add .
+  git commit -m "Add RN Community ESLint and Prettier"
+elif [ "$1" = "cli" ]; then
   yarn add --dev detox eslint-plugin-detox
   cp "${DIR}/template/.eslintrc.cli.js" .eslintrc.js
-elif [ "$1" = "expo" ]; then
-  cp "${DIR}/template/.eslintrc.expo.js" .eslintrc.js
+  git add .
+  git commit -m "Add Detox ESLint plugin"
 fi
-git add .
-git commit -m "Switch to CodingItWrong ESLint and Prettier"
 
 yarn add react-navigation
 if [ "$1" = "cli" ]; then

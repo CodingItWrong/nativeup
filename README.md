@@ -14,7 +14,7 @@ Script to set up a new React Native CLI or Expo project with a full suite of lib
   - End-to-End Tests: [Detox][detox], with [React Native Config][rn-config] for test-specific configuration
 - **Logging:** [Reactotron][reactotron]
 - **Utility Functions:** Lodash-ES
-- **Code Standardization:** [ESLint][eslint] and [Prettier][prettier]
+- **Code Standardization:** React Native Community [ESLint][eslint] and [Prettier][prettier] setup
 
 ## Requirements
 
