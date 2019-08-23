@@ -73,16 +73,9 @@ git commit -m "Add Reactotron"
 
 yarn add axios
 mkdir src
-if [ "$1" = "cli" ]; then
-  yarn add react-native-config
-  react-native link react-native-config
-  cp -r "${DIR}/template/src/api.cli" src/api
-  cp "${DIR}/template/src/api.js" src/api/remote.js
-  cp "${DIR}/template/.env" .env
-  cp "${DIR}/template/.env.detox" .env.detox
-elif [ "$1" = "expo" ]; then
-  cp "${DIR}/template/src/api.js" src/api.js
-fi
+cp -r "${DIR}/template/src/api" src/api
+cp "${DIR}/template/env.js" env.js
+cp "${DIR}/template/env.example.js" env.example.js
 git add .
 git commit -m "Add Axios"
 
