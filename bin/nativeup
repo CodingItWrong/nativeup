@@ -54,7 +54,6 @@ fi
 yarn add react-navigation
 if [ "$1" = "cli" ]; then
   yarn add react-native-gesture-handler
-  react-native link react-native-gesture-handler
 fi
 git add .
 git commit -m "Add React Navigation"
