@@ -64,7 +64,7 @@ The following changes to `package.json` need to be made manually after running t
 +    "configurations": {
 +      "ios.sim.debug": {
 +        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/YourAppName.app",
-+        "build": "ENVFILE=.env.detox xcodebuild -project ios/YourAppName.xcodeproj -scheme YourAppName -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
++        "build": "ENVFILE=.env.detox xcodebuild -workspace ios/YourAppName.xcworkspace -scheme YourAppName -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
 +        "type": "ios.simulator",
 +        "name": "iPhone 8"
 +      }
