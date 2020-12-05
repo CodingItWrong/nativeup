@@ -12,7 +12,6 @@ Script to set up a new React Native CLI or Expo project with a full suite of lib
   - Unit Tests: [Jest][jest]
   - Component Tests: [React Native Testing Library][rntl]
   - End-to-End Tests: [Detox][detox], with [React Native Config][rn-config] for test-specific configuration
-- **Logging:** [Reactotron][reactotron]
 - **Utility Functions:** Lodash-ES
 - **Code Standardization:** React Native Community [ESLint][eslint] and [Prettier][prettier] setup
 
@@ -85,7 +84,6 @@ Apache-2.0
 [jest]: https://jestjs.io/
 [prettier]: https://prettier.io/
 [react-navigation]: https://reactnavigation.org/
-[reactotron]: https://github.com/infinitered/reactotron
 [reststate-mobx]: https://mobx.reststate.org/
 [rntl]: https://callstack.github.io/react-native-testing-library/
 [rn-config]: https://github.com/luggit/react-native-config

@@ -66,11 +66,6 @@ yarn add lodash-es
 git add .
 git commit -m "Add Lodash-ES"
 
-yarn add -D reactotron-react-native
-cp "${DIR}/template/ReactotronConfig.js" ReactotronConfig.js
-git add .
-git commit -m "Add Reactotron"
-
 yarn add axios
 mkdir src
 cp -r "${DIR}/template/src/api" src/api

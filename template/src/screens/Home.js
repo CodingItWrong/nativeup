@@ -1,5 +1,4 @@
 import React from 'react';
-import Reactotron from 'reactotron-react-native';
 import { observer } from 'mobx-react';
 import { FlatList, View, Text, Button } from 'react-native';
 import { widgetStore } from '../stores';
