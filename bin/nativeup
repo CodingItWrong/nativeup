@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
 
 if [ "$1" = "cli" ]; then
-  react-native init $2
+  npx react-native init $2
 elif [ "$1" = "expo" ]; then
   expo init -t blank --yarn --name $2 $2
 else
@@ -26,65 +26,18 @@ if [ "$1" = "expo" ]; then
   git commit -m "Add Jest"
 fi
 
-yarn add --dev react-native-testing-library
+yarn add --dev @testing-library/react-native
 git add .
 git commit -m "Add RNTL"
-
-if [ "$1" = "cli" ]; then
-  yarn add --dev detox
-  detox init -r jest
-  git add .
-  git commit -m "Add Detox"
-fi
 
 if [ "$1" = "expo" ]; then
   yarn add --dev @react-native-community/eslint-config \
                  eslint
+ cp "${DIR}/template/.eslintrc.js" .eslintrc.js
   cp "${DIR}/template/.prettierrc.js" .prettierrc.js
-  cp "${DIR}/template/.eslintrc.expo.js" .eslintrc.js
   git add .
   git commit -m "Add RN Community ESLint and Prettier"
-elif [ "$1" = "cli" ]; then
-  yarn add --dev detox eslint-plugin-detox
-  cp "${DIR}/template/.eslintrc.cli.js" .eslintrc.js
-  git add .
-  git commit -m "Add Detox ESLint plugin"
 fi
-
-yarn add react-navigation
-if [ "$1" = "cli" ]; then
-  yarn add react-native-gesture-handler
-fi
-git add .
-git commit -m "Add React Navigation"
-
-yarn add formik yup
-git add .
-git commit -m "Add Formik and Yup"
-
-yarn add lodash-es
-git add .
-git commit -m "Add Lodash-ES"
-
-yarn add axios
-mkdir src
-cp -r "${DIR}/template/src/api" src/api
-cp "${DIR}/template/env.js" env.js
-cp "${DIR}/template/env.example.js" env.example.js
-git add .
-git commit -m "Add Axios"
-
-yarn add mobx \
-         mobx-react \
-         @reststate/mobx
-git add .
-git commit -m "Add @reststate/mobx"
-
-cp "${DIR}/template/App.js" App.js
-cp "${DIR}/template/src/stores.js" src/stores.js
-cp -r "${DIR}/template/src/screens" src/screens
-git add .
-git commit -m "Add sample app content"
 
 if [ "$1" = "cli" ]; then
   cp "${DIR}/template/README.cli.md" README.md
@@ -94,3 +47,9 @@ if [ "$1" = "expo" ]; then
 fi
 git add .
 git commit -m "Add default README"
+
+mkdir __tests__
+cp "${DIR}/template/App.js" App.js
+cp "${DIR}/template/__tests__/App.js" __tests__/App.js
+git add .
+git commit -m "Add default component and test"

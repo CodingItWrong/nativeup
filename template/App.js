@@ -1,10 +1,13 @@
-import { createStackNavigator, createAppContainer } from 'react-navigation';
-import Home from './src/screens/Home';
-import Details from './src/screens/Details';
+import React from 'react';
+import {SafeAreaView, StatusBar, Text} from 'react-native';
 
-const RootStack = createStackNavigator({
-  Home,
-  Details,
-});
-
-export default createAppContainer(RootStack);
+export default function App() {
+  return (
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <Text>Hello, React Native!</Text>
+      </SafeAreaView>
+    </>
+  );
+}

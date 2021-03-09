@@ -1,18 +1,10 @@
 # nativeup
 
-Script to set up a new React Native CLI or Expo project with a full suite of libraries, including:
+Script to set up a new React Native CLI or Expo project with some basic libraries, including:
 
-- **Navigation:** [React Navigation][react-navigation]
-- **Forms:** [Formik][formik]
-- **Validation:** [Yup][yup]
-- **Data Layer:**
-  - [`@reststate/mobx`][reststate-mobx] for the JSON:API-based data store
-  - [Axios][axios] for the HTTP client
 - **Testing**
   - Unit Tests: [Jest][jest]
   - Component Tests: [React Native Testing Library][rntl]
-  - End-to-End Tests: [Detox][detox], with [React Native Config][rn-config] for test-specific configuration
-- **Utility Functions:** Lodash-ES
 - **Code Standardization:** React Native Community [ESLint][eslint] and [Prettier][prettier] setup
 
 ## Requirements
@@ -20,7 +12,6 @@ Script to set up a new React Native CLI or Expo project with a full suite of lib
 - Node
 - [Yarn][yarn]
 - [React Native CLI and/or Expo CLI](https://facebook.github.io/react-native/docs/getting-started), depending on which type(s) of project you want to create
-- [Detox CLI][detox-installation] and its dependencies
 
 ## Usage
 
