@@ -43,33 +43,11 @@ The following changes to `package.json` need to be made manually after running t
 +    "format": "prettier --write \"**/*.js\"",
 ```
 
-- If using `cli`, configure Detox, replacing `YourAppName` with the name of the app you entered:
-
-```diff
- {
-   ...
-   "detox": {
--    "test-runner": "jest"
-+    "test-runner": "jest",
-+    "configurations": {
-+      "ios.sim.debug": {
-+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/YourAppName.app",
-+        "build": "ENVFILE=.env.detox xcodebuild -workspace ios/YourAppName.xcworkspace -scheme YourAppName -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
-+        "type": "ios.simulator",
-+        "name": "iPhone 8"
-+      }
-+    }
-   }
- }
-```
-
 ## License
 
 Apache-2.0
 
 [axios]: https://github.com/axios/axios
-[detox]: https://github.com/wix/Detox
-[detox-installation]: https://reactnativetesting.io/e2e/setup.html#installing-detox
 [eslint]: https://eslint.org/
 [formik]: https://jaredpalmer.com/formik/
 [jest]: https://jestjs.io/
