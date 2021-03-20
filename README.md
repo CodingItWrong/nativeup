@@ -47,15 +47,8 @@ The following changes to `package.json` need to be made manually after running t
 
 MIT
 
-[axios]: https://github.com/axios/axios
 [eslint]: https://eslint.org/
-[formik]: https://jaredpalmer.com/formik/
 [jest]: https://jestjs.io/
 [prettier]: https://prettier.io/
-[react-navigation]: https://reactnavigation.org/
-[reststate-mobx]: https://mobx.reststate.org/
 [rntl]: https://callstack.github.io/react-native-testing-library/
-[rn-config]: https://github.com/luggit/react-native-config
-[storybook]: https://storybook.js.org/
 [yarn]: https://yarnpkg.com/en/docs/install
-[yup]: https://github.com/jquense/yup
