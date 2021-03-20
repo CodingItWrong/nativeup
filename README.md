@@ -45,7 +45,7 @@ The following changes to `package.json` need to be made manually after running t
 
 ## License
 
-Apache-2.0
+MIT
 
 [axios]: https://github.com/axios/axios
 [eslint]: https://eslint.org/
