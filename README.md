@@ -3,14 +3,14 @@
 Script to set up a new React Native CLI or Expo project with some basic libraries, including:
 
 - **Testing**
-  - Unit Tests: [Jest][jest]
-  - Component Tests: [React Native Testing Library][rntl]
-- **Code Standardization:** React Native Community [ESLint][eslint] and [Prettier][prettier] setup
+  - Unit Tests: [Jest](https://jestjs.io/)
+  - Component Tests: [React Native Testing Library](https://callstack.github.io/react-native-testing-library/)
+- **Code Standardization:** React Native Community [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) setup
 
 ## Requirements
 
-- Node
-- [Yarn][yarn]
+- [Node](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/en/docs/install)
 - [React Native CLI and/or Expo CLI](https://facebook.github.io/react-native/docs/getting-started), depending on which type(s) of project you want to create
 
 ## Usage
@@ -40,15 +40,8 @@ The following changes to `package.json` need to be made manually after running t
 
 ```diff
 +    "lint": "eslint \"**/*.js\"",
-+    "format": "prettier --write \"**/*.js\"",
 ```
 
 ## License
 
 MIT
-
-[eslint]: https://eslint.org/
-[jest]: https://jestjs.io/
-[prettier]: https://prettier.io/
-[rntl]: https://callstack.github.io/react-native-testing-library/
-[yarn]: https://yarnpkg.com/en/docs/install
