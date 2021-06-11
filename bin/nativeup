@@ -51,7 +51,8 @@ git add .
 git commit -m "Add default README"
 
 mkdir __tests__
+rm __tests__/*
 cp "${DIR}/template/App.js" App.js
-cp "${DIR}/template/__tests__/App.js" __tests__/App.js
+cp "${DIR}/template/__tests__/App.spec.js" __tests__/App.spec.js
 git add .
 git commit -m "Add default component and test"
