@@ -26,9 +26,9 @@ if [ "$1" = "expo" ]; then
   git commit -m "Add Jest"
 fi
 
-yarn add --dev @testing-library/react-native
+yarn add --dev @testing-library/react-native @testing-library/jest-native
 git add .
-git commit -m "Add RNTL"
+git commit -m "Add RNTL and jest-native"
 
 if [ "$1" = "expo" ]; then
   yarn add --dev @react-native-community/eslint-config \

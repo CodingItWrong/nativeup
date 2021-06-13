@@ -4,7 +4,7 @@ Script to set up a new React Native CLI or Expo project with some basic librarie
 
 - **Testing**
   - Unit Tests: [Jest](https://jestjs.io/)
-  - Component Tests: [React Native Testing Library](https://callstack.github.io/react-native-testing-library/)
+  - Component Tests: [React Native Testing Library](https://callstack.github.io/react-native-testing-library/) with [jest-native](https://github.com/testing-library/jest-native)
 - **Code Standardization:** React Native Community [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) setup
 
 ## Requirements
