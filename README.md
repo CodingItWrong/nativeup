@@ -11,7 +11,7 @@ Script to set up a new React Native CLI or Expo project with some basic librarie
 
 - [Node](https://nodejs.org/)
 - [Yarn](https://yarnpkg.com/en/docs/install)
-- [React Native CLI and/or Expo CLI](https://facebook.github.io/react-native/docs/getting-started), depending on which type(s) of project you want to create
+- [Expo CLI](https://facebook.github.io/react-native/docs/getting-started) if you want to create an Expo project
 
 ## Usage
 
