@@ -21,15 +21,11 @@ cp "${DIR}/template/.npmrc" .npmrc
 git add .
 git commit -m "Prevent package lock"
 
-if [ "$1" = "expo" ]; then
-  yarn add --dev jest babel-jest
+if [ "$1" = "cli" ]; then
+  yarn add --dev @testing-library/react-native @testing-library/jest-native
   git add .
-  git commit -m "Add Jest"
+  git commit -m "Add RNTL and jest-native"
 fi
-
-yarn add --dev @testing-library/react-native @testing-library/jest-native
-git add .
-git commit -m "Add RNTL and jest-native"
 
 if [ "$1" = "expo" ]; then
   yarn add --dev @react-native-community/eslint-config \
@@ -52,9 +48,13 @@ fi
 git add .
 git commit -m "Add default README"
 
-mkdir __tests__
-rm __tests__/*
 cp "${DIR}/template/App.js" App.js
-cp "${DIR}/template/__tests__/App.spec.js" __tests__/App.spec.js
 git add .
-git commit -m "Add default component and test"
+git commit -m "Add app component"
+
+if [ "$1" = "cli" ]; then
+  rm __tests__/*
+  cp "${DIR}/template/__tests__/App.spec.js" __tests__/App.spec.js
+  git add .
+  git commit -m "Add sample test"
+fi
