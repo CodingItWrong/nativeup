@@ -4,15 +4,16 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
 
 if [ "$1" = "cli" ]; then
   npx react-native init $2
+  cd $2
+  git init .
 elif [ "$1" = "expo" ]; then
   expo init -t blank --yarn --name $2 $2
+  cd $2
 else
   echo "Unknown project type; enter one of: cli, expo"
   exit 1
 fi
 
-cd $2
-git init .
 git add .
 git commit -m "Create react native app with $1"
 
