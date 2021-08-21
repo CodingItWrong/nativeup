@@ -40,9 +40,3 @@ $ yarn lint
 ```bash
 $ yarn test
 ```
-
-### End-to-End Tests (iOS)
-
-```bash
-$ detox test
-```
