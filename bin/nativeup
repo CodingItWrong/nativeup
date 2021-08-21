@@ -37,6 +37,7 @@ if [ "$1" = "expo" ]; then
   cp "${DIR}/template/.prettierrc.js" .prettierrc.js
   git commit -m "Configure Prettier"
 fi
+
 yarn add --dev eslint-plugin-import
 cp "${DIR}/template/.eslintrc.js" .eslintrc.js
 git add .
