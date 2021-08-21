@@ -23,8 +23,8 @@ $ yarn start
 Then, in another terminal, run one of:
 
 ```bash
-$ react-native run-ios
-$ react-native run-android
+$ yarn ios
+$ yarn android
 ```
 
 ## Testing
