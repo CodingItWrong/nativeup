@@ -26,22 +26,6 @@ Where `[projecttype]` is one of:
 - `cli` - React Native CLI
 - `expo` - Expo
 
-## Manual Configuration
-
-The following changes to `package.json` need to be made manually after running the script:
-
-- If there isn't a `yarn test` script, add the following:
-
-```sh
-"test": "jest",
-```
-
-- Add lint and format NPM script:
-
-```diff
-+    "lint": "eslint \"**/*.js\"",
-```
-
 ## License
 
 MIT
