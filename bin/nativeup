@@ -36,7 +36,9 @@ fi
 
 yarn add --dev eslint-plugin-import
 cp "${DIR}/template/.eslintrc.js" .eslintrc.js
-npm set-script lint "eslint \"**/*.js\""
+if [ "$1" = "expo" ]; then
+  npm set-script lint "eslint \"**/*.js\""
+fi
 git add .
 git commit -m "Configure ESLint"
 
