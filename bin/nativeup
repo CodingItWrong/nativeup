@@ -67,11 +67,8 @@ git commit -m "Add app component"
 
 # SAMPLE TEST
 if [ "$1" = "cli" ]; then
-  rm __tests__/*
+  rm -fr __tests__
 fi
-if [ "$1" = "expo" ]; then
-  mkdir __tests__
-fi
-cp "${DIR}/template/__tests__/App.spec.js" __tests__/App.spec.js
+cp "${DIR}/template/App.spec.js" App.spec.js
 git add .
 git commit -m "Add sample test"
