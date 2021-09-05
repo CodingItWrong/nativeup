@@ -22,8 +22,16 @@ $ yarn start
 
 Then click "Run on Android device/emulator" or "Run on iOS simulator".
 
-## Linting
+## Testing
+
+### Linting
 
 ```bash
 $ yarn lint
+```
+
+### Unit Tests
+
+```bash
+$ yarn test
 ```
