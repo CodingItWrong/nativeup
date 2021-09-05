@@ -40,15 +40,13 @@ if [ "$1" = "expo" ]; then
   yarn add --dev @react-native-community/eslint-config \
                  eslint
   cp "${DIR}/template/.prettierrc.js" .prettierrc.js
-  git commit -m "Configure Prettier"
+  npm set-script lint "eslint \"**/*.js\""
+  git commit -m "Set up ESLint and Prettier"
 fi
 
 # ESLINT CONFIG
 yarn add --dev eslint-plugin-import
 cp "${DIR}/template/.eslintrc.js" .eslintrc.js
-if [ "$1" = "expo" ]; then
-  npm set-script lint "eslint \"**/*.js\""
-fi
 git add .
 git commit -m "Configure ESLint"
 
