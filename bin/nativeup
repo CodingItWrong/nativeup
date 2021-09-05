@@ -2,6 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
 
+# CREATE PROJECT
 if [ "$1" = "cli" ]; then
   npx react-native init $2
   cd $2
@@ -13,10 +14,10 @@ else
   echo "Unknown project type; enter one of: cli, expo"
   exit 1
 fi
-
 git add .
 git commit -m "Create react native app with $1"
 
+# PREVENT PACKAGE LOCK
 cp "${DIR}/template/.npmrc" .npmrc
 git add .
 git commit -m "Prevent package lock"
@@ -42,6 +43,7 @@ if [ "$1" = "expo" ]; then
   git commit -m "Configure Prettier"
 fi
 
+# ESLINT CONFIG
 yarn add --dev eslint-plugin-import
 cp "${DIR}/template/.eslintrc.js" .eslintrc.js
 if [ "$1" = "expo" ]; then
@@ -50,6 +52,7 @@ fi
 git add .
 git commit -m "Configure ESLint"
 
+# README
 if [ "$1" = "cli" ]; then
   cp "${DIR}/template/README.cli.md" README.md
 fi
