@@ -19,7 +19,7 @@ $ yarn install
 $ yarn start
 ```
 
-Then click "Run on Android device/emulator" or "Run on iOS simulator".
+Then click "Run on Android device/emulator", "Run on iOS simulator", or "Run in web browser"
 
 ## Testing
 
