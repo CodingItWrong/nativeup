@@ -5,7 +5,7 @@ A brief description of your app.
 ## Requirements
 
 - [Yarn](https://yarnpkg.com/en/docs/install)
-- [Expo CLI](https://facebook.github.io/react-native/docs/getting-started)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
 
 ## Installation
 
