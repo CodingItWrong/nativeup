@@ -28,7 +28,7 @@ Where `[projecttype]` is one of:
 
 ## Manual Steps
 
-The following steps must be done manually after running `babelup`:
+The following steps must be done manually after running `nativeup`:
 
 ### Expo
 
