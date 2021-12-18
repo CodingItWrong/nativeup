@@ -38,7 +38,7 @@ git commit -m "Add RNTL and jest-native"
 # ESLINT AND PRETTIER TOOLS
 if [ "$1" = "expo" ]; then
   yarn add --dev @react-native-community/eslint-config \
-                 eslint
+                 eslint@"^7.0"
   cp "${DIR}/template/.prettierrc.js" .prettierrc.js
   npm set-script lint "eslint \"**/*.js\""
   git commit -m "Set up ESLint and Prettier"
