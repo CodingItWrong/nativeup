@@ -25,7 +25,7 @@ git commit -m "Prevent package lock"
 # JEST
 if [ "$1" = "expo" ]; then
   yarn add --dev jest jest-expo
-  npm set-script test "jest"
+  npm set-script test "jest --watchAll"
   git add .
   git commit -m "Add Jest"
 fi
