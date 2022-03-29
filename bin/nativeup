@@ -72,3 +72,12 @@ fi
 cp "${DIR}/template/App.spec.js" App.spec.js
 git add .
 git commit -m "Add sample test"
+
+# OUTPUT INSTRUCTIONS FOR MANUAL SETUP STEPS
+echo ''
+echo 'Your app is almost ready! To finish setup, add the following to package.json:'
+echo ''
+echo '"jest": {'
+echo '  "preset": "jest-expo"'
+echo '},'
+echo ''
