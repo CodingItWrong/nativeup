@@ -24,7 +24,8 @@ git commit -m "Prevent package lock"
 
 # JEST
 if [ "$1" = "expo" ]; then
-  yarn add --dev jest jest-expo
+  # Pinned to 26: https://github.com/callstack/react-native-testing-library/issues/743
+  yarn add --dev jest@^26 jest-expo
   npm set-script test "jest --watchAll"
   git add .
   git commit -m "Add Jest"
