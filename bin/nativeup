@@ -8,7 +8,7 @@ if [ "$1" = "cli" ]; then
   cd $2
   git init .
 elif [ "$1" = "expo" ]; then
-  expo init $2 -t blank --yarn
+  yarn create expo-app $2 -t blank
   cd $2
 else
   echo "Unknown project type; enter one of: cli, expo"
