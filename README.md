@@ -1,5 +1,7 @@
 # nativeup
 
+**DEPRECATED:** this library has been superceded by [jessup](https://github.com/codingitwrong/jessup#readme), a project setup script for React Native, React for the web, and vanilla JS. Please check it out.
+
 Script to set up a new React Native CLI or Expo project with some basic libraries, including:
 
 - **Testing**
